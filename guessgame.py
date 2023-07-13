@@ -1,5 +1,8 @@
 from random import randint
 
+again = "yes"
+
+while again == "yes":
 number = randint(1, 100)
 print("OK, Ive thought of a number between 1 and 100.\n")
 prompt = "Make a guess: "
@@ -16,3 +19,7 @@ while answer is != number:
 
 print("that was my number. well done!")
 print(f'\n you took {counter} guesses.')
+
+again = input("would you like another game? ")
+
+print("ok, bye!")
