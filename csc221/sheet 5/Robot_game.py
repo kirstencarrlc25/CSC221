@@ -1,4 +1,7 @@
 from gasp import *
+from random import randint
+def grid():
+    for x in range
 
 begin_graphics()
 finished = False
