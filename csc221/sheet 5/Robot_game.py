@@ -1,29 +1,34 @@
 from gasp import *
+from random import randint
+
+
+def place_player():
+    global player_x, player_y, player_shape
+
+    print("I'm right here!")
+    player_x  = randint(0, 63)
+    player_y = randint(0, 47)
+    player_shape = Circle((10 * player_x + 5, 10 * player_y +5 ), 5, filled=True, color=color.PURPLE)
+
+
+def move_player():
+    global finished, player_shape, player_x, player_y
+
+    print("I'm moving to...")
+    key = update_when('key_pressed')
+    if key == 'q':
+        finished = True
+    if key == 'd':
+        player_x += 1
+
+    move_to(player_shape, (10 * player_x + 5, 10 * player_y + 5))
+
 
 begin_graphics()
-c = Circle((320, 200), 5)
-move_to(c, (350,220))
-from random import randint
-num1=(0,63)
-num2=(0, 47)
-player_x= num1
-player_y= num2
-Circle((10 * player_x + 5, 10 * player_y +5), 5, filled= True)
-finished = False 
-def place_player():
-print ("I'm right here!")
-move_player():
-print("I'm moving to...")
-update_when ("Key_pressed")
-
 finished = False
-def place_player_(x):
-    print("I'm right here!")
-def move_player():
-    print("I'm moving...")
-    update_when('key_pressed')
+place_player()
 
 while not finished:
     move_player()
 
-    end_graphics()
+end_graphics()
