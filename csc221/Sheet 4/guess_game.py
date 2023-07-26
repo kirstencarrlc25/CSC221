@@ -3,13 +3,13 @@ from random import randint
 again = "yes"
 
 while again == "yes":
-number = randint(1, 100)
+  number = randint(1, 100)
 print("OK, Ive thought of a number between 1 and 100.\n")
 prompt = "Make a guess: "
 answer = -1
 counter = 0
 
-while answer is != number:
+while answer != number:
     answer = int(input(prompt))
     counter = counter + 1
     if answer < number:
