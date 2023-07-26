@@ -20,7 +20,11 @@ def move_player():
         finished = True
     if key == 'd':
         player_x += 1
-
+    if key == 'a':
+        player_x += -1
+    if key == 'w':
+        player_x += 
+        
     move_to(player_shape, (10 * player_x + 5, 10 * player_y + 5))
 
 
